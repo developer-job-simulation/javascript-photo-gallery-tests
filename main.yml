@@ -1,4 +1,4 @@
-name: JavaSscript Photo Gallery Test Runner by Codebase Mentor
+name: JavaScript Photo Gallery Test Runner by Codebase Mentor
 on:
   pull_request_target:
     branches: ["main"]

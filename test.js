@@ -19,9 +19,11 @@ test("Issue #1: Add an event listener for each image in the gallery to show it i
     runScripts: "dangerously",
     resources: "usable",
   });
-  await setTimeout(10); // let css load
+  await setTimeout(30); // let css load
 
   click(dom, ".image");
+
+  await setTimeout(30); // let modal load
 
   const modal = dom.window.document.getElementById("modal");
   assert.is(modal.classList.contains("hidden"), false, "Modal should be visible after clicking an image");
@@ -34,10 +36,7 @@ test("Issue #2: Add event listeners for the prevBtn and nextBtn for modal naviga
   });
   await setTimeout(10); // let css load
 
-  const images = dom.window.document.querySelectorAll(".image");
   const modalImage = dom.window.document.getElementById("modalImage");
-  const prevBtn = dom.window.document.getElementById("prevBtn");
-  const nextBtn = dom.window.document.getElementById("nextBtn");
 
   // Open the modal by clicking the first image
   click(dom, ".image");

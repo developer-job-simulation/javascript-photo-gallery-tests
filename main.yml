@@ -1,4 +1,4 @@
-name: <REPO NAME GOES HERE> Test Runner by JobSimulator.Dev
+name: JavaSscript Photo Gallery Test Runner by Codebase Mentor
 on:
   pull_request_target:
     branches: ["main"]
@@ -40,7 +40,7 @@ jobs:
       - run: rm -rf tests # remove any user provided test dir
       - uses: actions/checkout@v3 # checkout tests repo
         with:
-          repository: <TEST REPO GOES HERE>
+          repository: developer-job-simulation/javascript-photo-gallery-tests
           path: tests
       - name: npm install
         run: cd tests && npm i
